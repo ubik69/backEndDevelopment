@@ -128,17 +128,19 @@ if ($link === false) {
 				<th width="150px">Class ID<br><hr></th>
 				<th width="250px">Class Name<br><hr></th>
 				<th width="170px">Class Capacity<br><hr></th>
+                <th width="90px">Teacher ID<br><hr></th>
                 
 			</tr>
 					
 			<?php
-			$sql = mysqli_query($link, "SELECT Class_ID , className , capacity FROM Class");
+			$sql = mysqli_query($link, "SELECT Class_ID , classYear , capacity , Teacher_ID FROM Class");
 			while ($row = $sql->fetch_assoc()){
 			echo "
 			<tr>
 				<th>{$row['Class_ID']}</th>
-				<th>{$row['className']}</th>
+				<th>{$row['classYear']}</th>
                 <th>{$row['capacity']}</th>
+                <th>{$row['Teacher_ID']}</th>
 			</tr>";
 			}
 			?>
