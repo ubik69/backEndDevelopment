@@ -26,6 +26,8 @@ if (isset($_POST['submit'])) {
 
     $Sname = $_POST['Sname'];
     $Ssurname = $_POST['Ssurname'];
+    $Parent_ID = $_POST['Parent_ID'];
+    $Class_ID = $_POST['Class_ID'];
    
 /*
 mysqli_query() function accepts a string value
@@ -33,7 +35,7 @@ representing a query as one of the parameters
 and, executes/performs the given query 
 on the database
 */
-    $send = "INSERT INTO Student1 (Sname,Ssurname) VALUES ('$Sname','$Ssurname')";
+    $send = "INSERT INTO Student1 (Sname,Ssurname,Parent_ID,Class_ID) VALUES ('$Sname','$Ssurname','$Parent_ID','$Class_ID')";
     if (mysqli_query($link, $send)) {
       echo "New record created successfully";
     } else {

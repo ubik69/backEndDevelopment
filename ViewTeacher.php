@@ -1,6 +1,5 @@
-<!DOCTYPE html>
 <html>
-    <head>
+<head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
@@ -23,7 +22,7 @@
         }
 
         .dropdown {
-          float: left;
+          float: right;
           overflow: hidden;
         }
 
@@ -39,7 +38,8 @@
         }
 
         .navbar a:hover, .dropdown:hover .dropbtn {
-          background-color: red;
+          background-color: dimgrey;
+          transition: linear 0.25s;
         }
 
         .dropdown-content {
@@ -69,8 +69,8 @@
         }
         </style>
     </head>
-    <body>
-        <div class="navbar">
+<body>
+<div class="navbar">
             <a href="index.html">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">View
@@ -81,6 +81,7 @@
                     <a href="ViewParent.php">Parent</a>
                     <a href="ViewTeacher.php">Teacher</a>
                     <a href="ViewClass.php">Class</a>
+                    <a href="ViewContact.php">Contact</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -107,7 +108,8 @@
           </div>
             <a href="Contact.html">Contact Us</a>
         </div>
-        <?php
+
+<?php
 
 
 $link = mysqli_connect("sdb-57.hosting.stackcp.net", "student84-353031351c89", "ua92-studentAc", "student84-353031351c89");
@@ -149,6 +151,7 @@ if ($link === false) {
 			}
 			?>
             </table>
+        </body>
+        </html>
 
-    </body>
-</html>
+

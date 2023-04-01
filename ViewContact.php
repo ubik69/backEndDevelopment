@@ -1,6 +1,5 @@
-<!DOCTYPE html>
 <html>
-    <head>
+<head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
@@ -8,7 +7,7 @@
           font-family: Arial, Helvetica, sans-serif;
         }
 
-        .navbar{
+        .navbar {
           overflow: hidden;
           background-color: #333;
         }
@@ -38,10 +37,10 @@
           margin: 0;
         }
 
-            .navbar a:hover, .dropdown:hover .dropbtn {
-                background-color: dimgrey;
-                transition: linear 0.25s;
-            }
+        .navbar a:hover, .dropdown:hover .dropbtn {
+          background-color: dimgrey;
+          transition: linear 0.25s;
+        }
 
         .dropdown-content {
           display: none;
@@ -70,8 +69,8 @@
         }
         </style>
     </head>
-    <body>
-        <div class="navbar">
+<body>
+<div class="navbar">
             <a href="index.html">Home</a>
             <div class="dropdown">
                 <button class="dropbtn">View
@@ -94,7 +93,7 @@
                     <a href="AddParent.html">Parent</a>
                     <a href="AddTeacher.html">Teacher</a>
                     <a href="AddClass.html">Class</a>
-                </div>                
+                </div>
             </div>
             <div class="dropdown">
               <button class="dropbtn">Delete
@@ -107,14 +106,44 @@
                   <a href="DeleteClass.html">Class</a>
               </div>                
           </div>
-
             <a href="Contact.html">Contact Us</a>
-            
         </div>
 
-        <div>
-            <br>
-        </div>
-        
-    </body>
-</html>
+<?php
+
+
+$link = mysqli_connect("sdb-57.hosting.stackcp.net", "student84-353031351c89", "ua92-studentAc", "student84-353031351c89");
+// Check connection
+if ($link === false) {
+    die("Connection failed: ");
+}
+?>
+
+<h3>See all Feedbacks , Contacts</h3>
+	
+		<table>	
+		
+			<tr>
+				<th width="150px">Contact ID<br><hr></th>
+				<th width="250px">Contact Name<br><hr></th>
+				<th width="170px">Contact Email<br><hr></th>
+                <th width="400px">Message<br><hr></th>
+                
+			</tr>
+					
+			<?php
+			$sql = mysqli_query($link, "SELECT contact_ID , contactName , returnContact , message FROM Contact");
+			while ($row = $sql->fetch_assoc()){
+			echo "
+			<tr>
+				<th>{$row['contact_ID']}</th>
+				<th>{$row['contactName']}</th>
+        <th>{$row['returnContact']}</th>
+        <th>{$row['message']}</th>
+			</tr>";
+			}
+			?>
+            </table>
+        </body>
+        </html>
+

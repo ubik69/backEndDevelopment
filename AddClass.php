@@ -11,11 +11,12 @@ if ($link === false) {
 
 if (isset($_POST['submit'])) {
 
-    $className = $_POST['className'];
+    $classYear = $_POST['classYear'];
     $capacity = $_POST['capacity'];
+    $Teacher_ID = $_POST['Teacher_ID'];
 
 
-    $sql = "INSERT INTO Class (className,capacity) VALUES ('$className','$capacity')";
+    $sql = "INSERT INTO Class (classYear,capacity,Teacher_ID) VALUES ('$classYear','$capacity','$Teacher_ID')";
     if (mysqli_query($link, $sql)) {
       echo "New record created successfully";
     } else {

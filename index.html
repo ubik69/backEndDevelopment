@@ -1,86 +1,92 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <style>
-        h1{
-
-            color:saddlebrown
-
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        h1 {
+            color: saddlebrown
         }
-        h2{
 
-            color:firebrick
-
+        h2 {
+            color: firebrick
+        }
+        /*Transitions Testing*/
+        {
+            --tran-01: all 0.2s ease;
+            --tran-02: all 0.8s ease;
         }
 
 
         body {
-          font-family: Arial, Helvetica, sans-serif;
+            background-image: image(backgroun.jpg);
+            font-family: Arial, Helvetica, sans-serif;
         }
 
-        .navbar {
-          overflow: hidden;
-          background-color: #333;
+            .navbar {
+            overflow: hidden;
+            background-color: #333;
         }
 
-        .navbar a {
-          float: left;
-          font-size: 16px;
-          color: white;
-          text-align: center;
-          padding: 14px 16px;
-          text-decoration: none;
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+            .dropdown {
+            float: right;
+            overflow: hidden;
         }
 
-        .dropdown {
-          float: left;
-          overflow: hidden;
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: dimgrey;
+                transition: linear 0.25s;
+            }
+
+           .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: fit-content;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
         }
 
-        .dropdown .dropbtn {
-          font-size: 16px;
-          border: none;
-          outline: none;
-          color: white;
-          padding: 14px 16px;
-          background-color: inherit;
-          font-family: inherit;
-          margin: 0;
-        }
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
 
-        .navbar a:hover, .dropdown:hover .dropbtn {
-          background-color: red;
-        }
-
-        .dropdown-content {
-          display: none;
-          position: absolute;
-          background-color: #f9f9f9;
-          min-width: 160px;
-          box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-          z-index: 1;
-        }
-
-        .dropdown-content a {
-          float: none;
-          color: black;
-          padding: 12px 16px;
-          text-decoration: none;
-          display: block;
-          text-align: left;
-        }
-
-        .dropdown-content a:hover {
-          background-color: #ddd;
-        }
+          .dropdown-content a:hover {
+                background-color: #ddd;
+                transition: ease-out 0.20s;
+                }
 
         .dropdown:hover .dropdown-content {
-          display: block;
+            display: block;
         }
-        </style>
-    </head>
+    </style>
+</head>
     <body>
         <div class="navbar">
             <a href="index.html">Home</a>
@@ -93,6 +99,7 @@
                     <a href="ViewParent.php">Parent</a>
                     <a href="ViewTeacher.php">Teacher</a>
                     <a href="ViewClass.php">Class</a>
+                    <a href="ViewContact.php">Contact</a>
                 </div>
             </div>
             <div class="dropdown">

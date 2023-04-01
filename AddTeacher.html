@@ -23,7 +23,7 @@
         }
 
         .dropdown {
-          float: left;
+          float: right;
           overflow: hidden;
         }
 
@@ -38,9 +38,10 @@
           margin: 0;
         }
 
-        .navbar a:hover, .dropdown:hover .dropbtn {
-          background-color: red;
-        }
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: dimgrey;
+                transition: linear 0.25s;
+            }
 
         .dropdown-content {
           display: none;
@@ -81,6 +82,7 @@
                     <a href="ViewParent.php">Parent</a>
                     <a href="ViewTeacher.php">Teacher</a>
                     <a href="ViewClass.php">Class</a>
+                    <a href="ViewContact.php">Contact</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -112,6 +114,10 @@
             <br>
             <form method="post" action="AddTeacher.php">
 
+                <label for="bonus_amount">Bonus Amount :</label>
+                <input type="text" name="bonus_amount" /><br /><br />
+                <label for="teacher_field">Teacher Field</label>
+                <input required type="text" name="teacher_field" /><br /><br />
                 <label for="Tname">Teacher First Name:</label>
                 <input required type="text" name="Tname"><br /><br />
                 <label for="Tsurname">Teacher Last Name:</label>
@@ -119,7 +125,7 @@
                 <label for="Taddress">Teacher Address :</label><br />
                 <textarea required name="Taddress" id="Taddress" cols="50" rows="10"></textarea><br><br />
                 <label for="Tmobile">Teacher Mobile :</label>
-                <input required type="tel" name="Tmobile"><br><br/>
+                <input required type="tel" name="Tmobile"><br><br />
                 <label for="Temail">Teacher Email :</label>
                 <input required type="email" name="Temail" />
 
