@@ -118,7 +118,6 @@
                 <a href="UptadeTeacher.html">Teacher</a>
                 <a href="UptadeClass.html">Class</a>
             </div>
-        </div>
             <a href="Contact.html">Contact Us</a>
         </div>
 

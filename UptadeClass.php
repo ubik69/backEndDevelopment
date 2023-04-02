@@ -11,13 +11,12 @@ if ($link === false) {
 
 if (isset($_POST['submit'])) {
 
-    $class_ID = $_POST['Class_ID']
+    $Class_ID = $_POST['Class_ID']
     $newClassYear = $_POST['newClassYear'];
     $newCapacity = $_POST['newCapacity'];
-    $newTeacher_ID = $_POST['newTeacher_ID'];
 
 
-    $sql = "UPTADE 'Class' SET 'classYear'= \'$newClassYear\','capacity'=\'$newCapacity'\ WHERE 'Class'.'Class_ID'=$class_ID;";
+    $sql = "UPDATE Class SET classYear=$newClassYear,capacity=$newCapacity WHERE Class_ID=$Class_ID;";
     if (mysqli_query($link, $sql)) {
       echo "New record created successfully";
     } else {
