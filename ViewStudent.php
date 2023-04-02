@@ -106,6 +106,19 @@
                   <a href="DeleteClass.html">Class</a>
               </div>                
           </div>
+                  </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Uptade
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="UptadeStudent.html">Student</a>
+                <a href="UptadeParent.html">Parent</a>
+                <a href="UptadeTeacher.html">Teacher</a>
+                <a href="UptadeClass.html">Class</a>
+            </div>
+        </div>
             <a href="Contact.html">Contact Us</a>
         </div>
 
@@ -127,6 +140,8 @@ if ($link === false) {
 				<th width="150px">student ID<br><hr></th>
 				<th width="250px">Student First Name<br><hr></th>
 				<th width="250px">Student Last Name<br><hr></th>
+                <th width="100px">Student's Parent ID<br><hr></th>
+                <th width="100px">Student's Class ID<br><hr></th>
                 
 			</tr>
 				
@@ -135,13 +150,15 @@ if ($link === false) {
               Note: Fieldnames returned from 
 			  this function are case-sensitive.
 			*/	
-			$sql = mysqli_query($link, "SELECT Sid,Sname,Ssurname FROM Student1");
+			$sql = mysqli_query($link, "SELECT Sid,Sname,Ssurname,Parent_ID,Class_ID FROM Student1");
 			while ($row = $sql->fetch_assoc()){
 			echo "
 			<tr>
 				<th>{$row['Sid']}</th>
 				<th>{$row['Sname']}</th>
 				<th>{$row['Ssurname']}</th>
+                <th>{$row['Parent_ID']}</th>
+                <th>{$row['Class_ID']}</th>
                 
 			</tr>";
 			}
@@ -149,5 +166,3 @@ if ($link === false) {
             </table>
         </body>
         </html>
-
-

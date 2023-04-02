@@ -106,7 +106,19 @@
                   <a href="DeleteTeacher.html">Teacher</a>
                   <a href="DeleteClass.html">Class</a>
               </div>                
-          </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">
+                Uptade
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="UptadeStudent.html">Student</a>
+                <a href="UptadeParent.html">Parent</a>
+                <a href="UptadeTeacher.html">Teacher</a>
+                <a href="UptadeClass.html">Class</a>
+            </div>
+        </div>
             <a href="Contact.html">Contact Us</a>
         </div>
 
