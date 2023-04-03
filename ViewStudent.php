@@ -93,6 +93,7 @@
                     <a href="AddParent.html">Parent</a>
                     <a href="AddTeacher.html">Teacher</a>
                     <a href="AddClass.html">Class</a>
+                    <a href="AddGymMember.html">Gym</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -105,8 +106,7 @@
                   <a href="DeleteTeacher.html">Teacher</a>
                   <a href="DeleteClass.html">Class</a>
               </div>                
-          </div>
-                  </div>
+        </div>
         <div class="dropdown">
             <button class="dropbtn">
                 Uptade
@@ -118,6 +118,7 @@
                 <a href="UptadeTeacher.html">Teacher</a>
                 <a href="UptadeClass.html">Class</a>
             </div>
+        </div>
             <a href="Contact.html">Contact Us</a>
         </div>
 

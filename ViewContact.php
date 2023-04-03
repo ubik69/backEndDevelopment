@@ -93,6 +93,7 @@
                     <a href="AddParent.html">Parent</a>
                     <a href="AddTeacher.html">Teacher</a>
                     <a href="AddClass.html">Class</a>
+                    <a href="AddGymMember.html">Gym</a>
                 </div>
             </div>
             <div class="dropdown">

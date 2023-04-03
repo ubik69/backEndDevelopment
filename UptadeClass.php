@@ -3,7 +3,7 @@
 
 $link = mysqli_connect("sdb-57.hosting.stackcp.net", "student84-353031351c89", "ua92-studentAc", "student84-353031351c89");
 // Check connection
-if ($link === false) {
+if ($link === false) {  
     die("Connection failed: ");
 }
 

@@ -1,5 +1,6 @@
+<!DOCTYPE html>
 <html>
-<head>
+    <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
@@ -37,10 +38,10 @@
           margin: 0;
         }
 
-        .navbar a:hover, .dropdown:hover .dropbtn {
-          background-color: dimgrey;
-          transition: linear 0.25s;
-        }
+            .navbar a:hover, .dropdown:hover .dropbtn {
+                background-color: dimgrey;
+                transition: linear 0.25s;
+            }
 
         .dropdown-content {
           display: none;
@@ -69,11 +70,12 @@
         }
         </style>
     </head>
-<body>
-<div class="navbar">
+    <body>
+        <div class="navbar">
             <a href="index.html">Home</a>
             <div class="dropdown">
-                <button class="dropbtn">View
+                <button class="dropbtn">
+                    View
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -85,7 +87,8 @@
                 </div>
             </div>
             <div class="dropdown">
-                <button class="dropbtn">Add
+                <button class="dropbtn">
+                    Add
                     <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
@@ -94,78 +97,59 @@
                     <a href="AddTeacher.html">Teacher</a>
                     <a href="AddClass.html">Class</a>
                     <a href="AddGymMember.html">Gym</a>
-                    
                 </div>
             </div>
             <div class="dropdown">
-              <button class="dropbtn">Delete
-                  <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                  <a href="DeleteStudent.html">Student</a>
-                  <a href="DeleteParent.html">Parent</a>
-                  <a href="DeleteTeacher.html">Teacher</a>
-                  <a href="DeleteClass.html">Class</a>
-              </div>                
-        </div>
-        <div class="dropdown">
-            <button class="dropbtn">
-                Uptade
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                <a href="UptadeStudent.html">Student</a>
-                <a href="UptadeParent.html">Parent</a>
-                <a href="UptadeTeacher.html">Teacher</a>
-                <a href="UptadeClass.html">Class</a>
+                <button class="dropbtn">
+                    Delete
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="DeleteStudent.html">Student</a>
+                    <a href="DeleteParent.html">Parent</a>
+                    <a href="DeleteTeacher.html">Teacher</a>
+                    <a href="DeleteClass.html">Class</a>
+                </div>
             </div>
-        </div>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    Uptade
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="UptadeStudent.html">Student</a>
+                    <a href="UptadeParent.html">Parent</a>
+                    <a href="UptadeTeacher.html">Teacher</a>
+                    <a href="UptadeClass.html">Class</a>
+                </div>
+            </div>
+
             <a href="Contact.html">Contact Us</a>
         </div>
 
-<?php
+        <div>
+            <br>
+            <form method="post" action="AddGymMember.php">
 
+    	   <label for="gymFullName">Enter full name :</label>
+    	  <input required type="text" name="gymFullName"><br><br>
+          <label for="userRegDate">Register Date:</label>
+          <input required type="date" max="2023-04-03" name="userRegDate"><br><br>
+          <label for="memberType">Course:</label>
+          <select required id="memberType" name="memberType">
+              <option value="bronzeMember">Bronze</option>
+              <option value="silverMember">Silver</option>
+              <option value="goldMember">Gold</option>
+              <option value="diamondMember">Diamond</option>
+          </select> <br><BR>
+          <label for="medicalCondition">Medical Condition (if there're any)</label>
+          <input type="text" name="medicalCondition"><br>
 
-$link = mysqli_connect("sdb-57.hosting.stackcp.net", "student84-353031351c89", "ua92-studentAc", "student84-353031351c89");
-// Check connection
-if ($link === false) {
-    die("Connection failed: ");
-}
-?>
+    			<br><br>
 
-<h3>See all Teachers</h3>
-	
-		<table>
-		
-			<tr>
-				<th width="150px">Teacher ID<br><hr></th>
-				<th width="250px">Teacher First Name<br><hr></th>
-				<th width="250px">Teacher Last Name<br><hr></th>
-        <th width="250px">Teacher Address<br><hr></th>
-        <th width="150px">Teacher Mobile<br><hr></th>
-        <th width="150px">Teacher Email<br><hr></th>
-			</tr>
-				
-			<?php
-			/* 	function fetches a result row as an associative array.
-              Note: Fieldnames returned from 
-			  this function are case-sensitive.
-			*/	
-			$sql = mysqli_query($link, "SELECT Teacher_ID,Tname,Tsurname,Taddress,Tmobile,Temail FROM Teacher");
-			while ($row = $sql->fetch_assoc()){
-			echo "
-			<tr>
-				<th>{$row['Teacher_ID']}</th>
-				<th>{$row['Tname']}</th>
-				<th>{$row['Tsurname']}</th>
-        <th>{$row['Taddress']}</th>
-        <th>{$row['Tmobile']}</th>
-        <th>{$row['Temail']}</th>
-			</tr>";
-			}
-			?>
-            </table>
-        </body>
-        </html>
+    			<input type="submit" name="submit">
 
-
+    		</form>
+        </div>
+    </body>
+</html>
