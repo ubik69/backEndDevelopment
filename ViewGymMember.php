@@ -82,6 +82,7 @@
                     <a href="ViewTeacher.php">Teacher</a>
                     <a href="ViewClass.php">Class</a>
                     <a href="ViewContact.php">Contact</a>
+                    <a href="ViewGymMember.php">Gym</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -132,7 +133,7 @@ if ($link === false) {
 }
 ?>
 
-<h3>See all Parents</h3>
+<h3>See all Gym Members</h3>
 	
 		<table>	
 		
@@ -140,49 +141,29 @@ if ($link === false) {
 				<th width="150px">Gym Member ID<br><hr></th>
 				<th width="250px">Gym Member Full Name<br><hr></th>
 				<th width="250px">Registration Date<br><hr></th>
-				<th width="350px">Remaining Days<br><hr></th>
 				<th width="100px">memberType<br><hr></th>
                 <th width="200px">medicalCondition<br><hr></th>
                 
 			</tr>
 
-             <?php
-            
-            $memberType = $_POST['memberType'];
-            $remainingTime = $_POST['remainingTime'];
-
-
-             @membershipStart();
-             $userRegDate = $row_Gym['userRegDate'];
+<?php
 
 
 
-            if($memberType = ['bronzeMember']){
-                $membershipBronzeEnd = date("Y-m-d",strtotime(date("Y-m-d",strtotime($userRegDate))."+30 day")
-            }elseif($memberType = ['silverMember']){
-                $membershipSilverEnd = date("Y-m-d",strtotime(date("Y-m-d",strtotime($userRegDate))."+60 day")
-            }elseif($memberType =['goldMember']){
-                $membershipGoldEnd = date("Y-m-d",strtotime(date("Y-m-d",strtotime($userRegDate))."+90 day")
-            }else{
-                $membershipDiamondEnd = date("Y-m-d",strtotime(date("Y-m-d",strtotime($userRegDate))."+180 day")
-            }
+?>
 
-            $remainingTime=
-            
 
-             ?>
 
 
 					
 			<?php
-			$sql = mysqli_query($link, "SELECT gymMemberID, gymFullName , userRegDate , remainingTime , memberType , medicalCondition  FROM Gym");
+			$sql = mysqli_query($link, "SELECT gymMemberID, gymFullName , userRegDate , memberType , medicalCondition  FROM Gym");
 			while ($row = $sql->fetch_assoc()){
 			echo "
 			<tr>
 				<th>{$row['gymMemberID']}</th>
 				<th>{$row['gymFullName']}</th>
                 <th>{$row['userRegDate']}</th>
-				<th>{$row['remainingTime']}</th>
 				<th>{$row['memberType']}</th>
                 <th>{$row['medicalCondition']}</th>
 			</tr>";
