@@ -153,7 +153,7 @@ if ($link === false) {
 			<tr>
 				<th>{$row['Parent_ID']}</th>
 				<th>{$row['Pname']}</th>
-        <th>{$row['Psurname']}</th>
+                <th>{$row['Psurname']}</th>
 				<th>{$row['Paddress']}</th>
 				<th>{$row['Pemail']}</th>
 			</tr>";

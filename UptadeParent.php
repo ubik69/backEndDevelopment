@@ -11,16 +11,17 @@ if ($link === false) {
 
 if (isset($_POST['submit'])) {
 
-    $Class_ID = $_POST['Class_ID'];
-    $classYear = $_POST['classYear'];
-    $capacity = $_POST['capacity'];
+    $Parent_ID = $_POST['Parent_ID'];
+    $Pname = $_POST['Pname'];
+    $Psurname = $_POST['Psurname'];
+    $Paddress = $_POST['Paddress'];
+    $Pemail = $_POST['Pemail'];
 
-
-    $sql = "UPDATE Class SET classYear='$classYear',capacity='$capacity' WHERE Class_ID='$Class_ID'";
+    $sql = "UPDATE Parent SET Pname='$Pname',Psurname='$Psurname',Paddress='$Paddress',Pemail='$Pemail' WHERE Parent_ID='$Parent_ID'";
     if (mysqli_query($link, $sql)) {
         echo "Record has been uptaded.";
     } else {
-      echo "Error uptading record ";
+        echo "Error uptading record ";
     }
 
 }
