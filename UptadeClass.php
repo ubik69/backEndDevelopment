@@ -11,7 +11,7 @@ if ($link === false) {
 
 if (isset($_POST['submit'])) {
 
-    $Class_ID = $_POST['Class_ID']
+    $Class_ID = $_POST['Class_ID'];
     $newClassYear = $_POST['newClassYear'];
     $newCapacity = $_POST['newCapacity'];
 
