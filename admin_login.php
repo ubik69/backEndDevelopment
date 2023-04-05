@@ -5,6 +5,10 @@
         <style>
         body {
           font-family: Arial, Helvetica, sans-serif;
+           background-image: url(backback.png);
+           padding-bottom: 500px;
+           background-size: cover;
+           background-position: center;
         }
 
         .navbar {
@@ -70,6 +74,7 @@
         </style>
     </head>
 <body>
+    <img src="rishton.png" />
 <div class="navbar">
             <a href="index.html">Home</a>
             <div class="dropdown">
