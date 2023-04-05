@@ -135,31 +135,31 @@
                     <a href="UptadeSalary.html">Salary</a>
                 </div>
             </div>
+
+
+
             <a href="Contact.html">Contact Us</a>
         </div>
-        <h1>Contact us Page</h1>
+        <h1>Salary Add Page</h1>
         <div>
             <br>
-            <form method="post" action="Contact.php">
-
-                <label for="contactName">Name:</label>
-    			      <input type="text" name="contactName" required>
-                <br><br>
-                <label for="returnContact">Return contact email (optional):</label>
-                <br>
-    			      <input type="email" name="returnContact">
-
+            <form method="post" action="AddSalary.php">
+                
+    			<label for="Teacher_ID">Teacher ID:</label>
+    			<input required type="text" name="Teacher_ID"><br /><br />
+                 <label for="salary_amount">Salary amount:</label>
+                 <input required type="text" name="salary_amount"><br><br>
+                <label for="workingTimes">Select working type: </label>
+              <select required id="workingTimes" name="workingTimes">
+              <option value="partTime">Part-Time</option>
+              <option value="fullTime">Full-Time</option>
+              </select> 
     			<br><br>
-
-                <label for="message">Message:</label>
-                <br>
-                <textarea name="message" rows="12" cols="80" required></textarea>
-
-                <br><br>
 
     			<input type="submit" name="submit">
 
     		</form>
         </div>
+
     </body>
 </html>

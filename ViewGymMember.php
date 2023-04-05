@@ -88,6 +88,7 @@
                     <a href="ViewClass.php">Class</a>
                     <a href="ViewContact.php">Contact</a>
                     <a href="ViewGymMember.php">Gym</a>
+                    <a href="ViewSalary.php">Salary</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -100,6 +101,7 @@
                     <a href="AddTeacher.html">Teacher</a>
                     <a href="AddClass.html">Class</a>
                     <a href="AddGymMember.php">Gym</a>
+                    <a href="AddSalary.html">Salary</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -112,6 +114,7 @@
                   <a href="DeleteTeacher.html">Teacher</a>
                   <a href="DeleteClass.html">Class</a>
                   <a href="DeleteGymMember.html">Gym</a>
+                  <a href="DeleteSalary.html">Salary</a>
               </div>                
         </div>
         <div class="dropdown">
@@ -124,9 +127,11 @@
                 <a href="UptadeParent.html">Parent</a>
                 <a href="UptadeTeacher.html">Teacher</a>
                 <a href="UptadeClass.html">Class</a>
+                <a href="UptadeGym.html">Gym</a>
+                <a href="UptadeSalary.html">Salary</a>
             </div>
         </div>
-            <a href="Contact.html">Contact Us</a>
+                <a href="Contact.html">Contact Us</a>
         </div>
 
 <?php
@@ -144,6 +149,7 @@ if ($link === false) {
 		<table>	
 		
 			<tr>
+                <th width="100px">Student ID<br /><hr /></th>
 				<th width="150px">Gym Member ID<br><hr></th>
 				<th width="250px">Gym Member Full Name<br><hr></th>
 				<th width="250px">Registration Date<br><hr></th>
@@ -155,10 +161,11 @@ if ($link === false) {
 
 
             <?php
-			$sql = mysqli_query($link, "SELECT gymMemberID, gymFullName , userRegDate , memberType , medicalCondition  FROM Gym");
+			$sql = mysqli_query($link, "SELECT Sid,gymMemberID, gymFullName , userRegDate , memberType , medicalCondition  FROM Gym");
 			while ($row = $sql->fetch_assoc()){
 			echo "
 			<tr>
+                <th>{$row['Sid']}</th>
 				<th>{$row['gymMemberID']}</th>
 				<th>{$row['gymFullName']}</th>
                 <th>{$row['userRegDate']}</th>

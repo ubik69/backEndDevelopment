@@ -88,6 +88,7 @@
                     <a href="ViewClass.php">Class</a>
                     <a href="ViewContact.php">Contact</a>
                     <a href="ViewGymMember.php">Gym</a>
+                    <a href="ViewSalary.php">Salary</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -100,6 +101,7 @@
                     <a href="AddTeacher.html">Teacher</a>
                     <a href="AddClass.html">Class</a>
                     <a href="AddGymMember.php">Gym</a>
+                    <a href="AddSalary.html">Salary</a>
                     
                 </div>
             </div>
@@ -113,6 +115,7 @@
                   <a href="DeleteTeacher.html">Teacher</a>
                   <a href="DeleteClass.html">Class</a>
                   <a href="DeleteGymMember.html">Gym</a>
+                  <a href="DeleteSalary.html">Salary</a>
               </div>                
         </div>
         <div class="dropdown">
@@ -125,6 +128,8 @@
                 <a href="UptadeParent.html">Parent</a>
                 <a href="UptadeTeacher.html">Teacher</a>
                 <a href="UptadeClass.html">Class</a>
+                <a href="UptadeGym.html">Gym</a>
+                <a href="UptadeSalary.html">Salary</a>
             </div>
         </div>
             <a href="Contact.html">Contact Us</a>

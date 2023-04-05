@@ -140,28 +140,24 @@
 
         <a href="Contact.html">Contact Us</a>
     </div>
-<h1>Teacher Uptade Page</h1>
+<h1>Gym Member Uptade Page</h1>
     <div>
         <br>
-        <form method="post" action="UptadeTeacher.php">
+        <form method="post" action="UptadeGym.php">
 
 
-            <label for="Teacher_ID">Teacher ID:</label>
-            <input required type="text" name="Teacher_ID" /><br /><br />
-            <label for="bonus_amount">New bonus amount: </label>
-            <input required type="text" name="bonus_amount" /><br /><br />
-            <label for="teacher_field">New teacher field :</label>
-            <input required type="text" name="teacher_field"><br /><br />
-            <label for="Tname">New teacher name:</label>
-            <input required type="text" name="Tname"><br /><br />
-            <label for="Tsurname">New teacher surname: </label>
-            <input required type="text" name="Tsurname"><br><br>
-            <label for="Taddress">New teacher address:</label>
-            <input required type="text" name="Taddress"><br /><br />
-            <label for="Tmobile">New Teacher Mobile: </label>
-            <input required type="number" name="Tmobile"><br><br>
-            <label for="Temail">New Teacher Email: </label>
-            <input required type="email" name="Temail"><br><br>
+            <label for="gymMemberID">Gym Member ID:</label>
+            <input required type="text" name="gymMemberID" /><br /><br />
+            <label for="gymFullName">New Full Name :</label>
+            <input required type="text" name="gymFullName"><br /><br />
+            <label for="memberType">New Member Type :</label>
+            <select required id="memberType" name="memberType">
+              <option value="bronzeMember">Bronze</option>
+              <option value="silverMember">Silver</option>
+              <option value="goldMember">Gold</option>
+              <option value="diamondMember">Diamond</option>
+             </select> <br><BR>
+
 
             <br><br>
 
