@@ -140,7 +140,7 @@
     	   <label for="gymFullName">Enter full name :</label>
     	  <input required type="text" name="gymFullName"><br><br>
           <label for="userRegDate">Register Date:</label>
-          <input required type="date" max="2023-04-03" name="userRegDate"><br><br>
+          <input required type="date" name="userRegDate"><br><br>
           <label for="memberType">Course:</label>
           <select required id="memberType" name="memberType">
               <option value="bronzeMember">Bronze</option>
@@ -163,18 +163,31 @@ $link = mysqli_connect("sdb-57.hosting.stackcp.net", "student84-353031351c89", "
 if ($link === false) {
     die("Connection failed: ");
 }
+$memberType = $_POST['memberType'];               /* getting the member type from input */
+$gymMemberID = $_POST['gymMemberID'];             /* getting the member id for ending date */
 
-$userRegDate=$_POST['userRegDate'];                 
+if($memberType=="bronzeMember"){
+    $endingDate=date_create("now");
+    date_add($endingDate,date_interval_create_from_date_string("30 days"));
+    echo"Your membership will expire on ";
+    echo date_format($endingDate,"Y-m-d");
+}elseif($memberType=="silverMember"){
+    $endingDate=date_create("now");
+    date_add($endingDate,date_interval_create_from_date_string("60 days"));
+    echo"Your membership will expire on ";
+    echo date_format($endingDate,"Y-m-d");
+}elseif($memberType=="goldMember"){
+    $endingDate=date_create("now");
+    date_add($endingDate,date_interval_create_from_date_string("90 days"));
+    echo"Your membership will expire on ";
+    echo date_format($endingDate,"Y-m-d");
+}elseif($memberType=="diamondMember"){
+    $endingDate=date_create("now");
+    date_add($endingDate,date_interval_create_from_date_string("180 days"));
+    echo"Your membership will expire on ";
+    echo date_format($endingDate,"Y-m-d");
 
-$dateCalculation = "SELECT DATEADD(month, 1,'$userRegDate') AS DateAdd";
-
-    if (mysqli_query($link,$dateCalculation)){
-        
-        echo"Ending date calculated $dateCalculation.";
-    }else{
-        echo"Problem while creating ending date.";
-    }
-
+}
 
 
 if (isset($_POST['submit'])) {
@@ -183,6 +196,7 @@ if (isset($_POST['submit'])) {
     $userRegDate = $_POST['userRegDate'];
     $memberType = $_POST['memberType'];
     $medicalCondition = $_POST['medicalCondition'];
+
    
 
     $gym = "INSERT INTO Gym (gymFullName,userRegDate,memberType,medicalCondition) VALUES ('$gymFullName','$userRegDate','$memberType','$medicalCondition')";
@@ -191,6 +205,7 @@ if (isset($_POST['submit'])) {
     } else {
       echo "<br><br>Error adding record ";
     }
+
 
 }
 

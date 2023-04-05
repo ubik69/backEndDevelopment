@@ -148,13 +148,14 @@ if ($link === false) {
 				<th width="250px">Registration Date<br><hr></th>
 				<th width="100px">memberType<br><hr></th>
                 <th width="200px">medicalCondition<br><hr></th>
+                <th width="200px">Membership ending date<br><hr></th>
                 
 			</tr>
 
 
 
             <?php
-			$sql = mysqli_query($link, "SELECT gymMemberID, gymFullName , userRegDate , memberType , medicalCondition  FROM Gym");
+			$sql = mysqli_query($link, "SELECT gymMemberID, gymFullName , userRegDate , endingDate , memberType , medicalCondition  FROM Gym");
 			while ($row = $sql->fetch_assoc()){
 			echo "
 			<tr>
