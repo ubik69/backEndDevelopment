@@ -111,6 +111,7 @@
                   <a href="DeleteParent.html">Parent</a>
                   <a href="DeleteTeacher.html">Teacher</a>
                   <a href="DeleteClass.html">Class</a>
+                  <a href="DeleteGymMember.html">Gym</a>
               </div>                
         </div>
         <div class="dropdown">
@@ -148,14 +149,13 @@ if ($link === false) {
 				<th width="250px">Registration Date<br><hr></th>
 				<th width="100px">memberType<br><hr></th>
                 <th width="200px">medicalCondition<br><hr></th>
-                <th width="200px">Membership ending date<br><hr></th>
                 
 			</tr>
 
 
 
             <?php
-			$sql = mysqli_query($link, "SELECT gymMemberID, gymFullName , userRegDate , endingDate , memberType , medicalCondition  FROM Gym");
+			$sql = mysqli_query($link, "SELECT gymMemberID, gymFullName , userRegDate , memberType , medicalCondition  FROM Gym");
 			while ($row = $sql->fetch_assoc()){
 			echo "
 			<tr>
@@ -164,7 +164,6 @@ if ($link === false) {
                 <th>{$row['userRegDate']}</th>
 				<th>{$row['memberType']}</th>
                 <th>{$row['medicalCondition']}</th>
-                <th>{$row['endingDate']}</th>
 			</tr>";
 			}
             ?>

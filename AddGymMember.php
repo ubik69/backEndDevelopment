@@ -115,6 +115,7 @@
                     <a href="DeleteParent.html">Parent</a>
                     <a href="DeleteTeacher.html">Teacher</a>
                     <a href="DeleteClass.html">Class</a>
+                    <a href="DeleteGymMember.html">Gym</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -186,8 +187,8 @@ if($memberType=="bronzeMember"){
     date_add($endingDate,date_interval_create_from_date_string("180 days"));
     echo"Your membership will expire on ";
     echo date_format($endingDate,"Y-m-d");
-
 }
+
 
 
 if (isset($_POST['submit'])) {

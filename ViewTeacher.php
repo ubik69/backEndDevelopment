@@ -112,6 +112,7 @@
                   <a href="DeleteParent.html">Parent</a>
                   <a href="DeleteTeacher.html">Teacher</a>
                   <a href="DeleteClass.html">Class</a>
+                  <a href="DeleteGymMember.html">Gym</a>
               </div>                
         </div>
         <div class="dropdown">
