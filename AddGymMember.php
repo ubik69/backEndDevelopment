@@ -201,6 +201,7 @@ if($memberType=="bronzeMember"){
 
 if (isset($_POST['submit'])) {
 
+    $Sid=$_POST['Sid'];
     $gymFullName = $_POST['gymFullName'];
     $userRegDate = $_POST['userRegDate'];
     $memberType = $_POST['memberType'];
@@ -208,7 +209,7 @@ if (isset($_POST['submit'])) {
 
    
 
-    $gym = "INSERT INTO Gym (gymFullName,userRegDate,memberType,medicalCondition) VALUES ('$gymFullName','$userRegDate','$memberType','$medicalCondition')";
+    $gym = "INSERT INTO Gym (Sid,gymFullName,userRegDate,memberType,medicalCondition) VALUES ('$Sid','$gymFullName','$userRegDate','$memberType','$medicalCondition')";
     if (mysqli_query($link, $gym)) {
       echo "<br><br>New record created successfully";
     } else {
