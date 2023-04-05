@@ -94,7 +94,7 @@
                     <a href="AddParent.html">Parent</a>
                     <a href="AddTeacher.html">Teacher</a>
                     <a href="AddClass.html">Class</a>
-                    <a href="AddGymMember.html">Gym</a>
+                    <a href="AddGymMember.php">Gym</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -146,17 +146,9 @@ if ($link === false) {
                 
 			</tr>
 
-<?php
 
 
-
-?>
-
-
-
-
-					
-			<?php
+            <?php
 			$sql = mysqli_query($link, "SELECT gymMemberID, gymFullName , userRegDate , memberType , medicalCondition  FROM Gym");
 			while ($row = $sql->fetch_assoc()){
 			echo "
@@ -166,9 +158,10 @@ if ($link === false) {
                 <th>{$row['userRegDate']}</th>
 				<th>{$row['memberType']}</th>
                 <th>{$row['medicalCondition']}</th>
+                <th>{$row['endingDate']}</th>
 			</tr>";
 			}
-			?>
+            ?>
             </table>
         </body>
         </html>

@@ -84,6 +84,7 @@
                     <a href="ViewTeacher.php">Teacher</a>
                     <a href="ViewClass.php">Class</a>
                     <a href="ViewContact.php">Contact</a>
+                    <a href="ViewGymMember.php">Gym</a>
                 </div>
             </div>
             <div class="dropdown">
@@ -157,6 +158,19 @@ $link = mysqli_connect("sdb-57.hosting.stackcp.net", "student84-353031351c89", "
 if ($link === false) {
     die("Connection failed: ");
 }
+
+$userRegDate=$_POST['userRegDate'];                 
+
+$dateCalculation = "SELECT DATEADD(month, 1,'$userRegDate') AS DateAdd";
+
+    if (mysqli_query($link,$dateCalculation)){
+        
+        echo"Ending date calculated $dateCalculation.";
+    }else{
+        echo"Problem while creating ending date.";
+    }
+
+
 
 if (isset($_POST['submit'])) {
 
