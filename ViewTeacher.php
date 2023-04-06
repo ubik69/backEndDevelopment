@@ -150,7 +150,9 @@ if ($link === false) {
 		<table>
 		
 			<tr>
-				<th width="150px">Teacher ID<br><hr></th>
+              <th width="150px">Teacher ID<br><hr></th>
+				<th width="250px">Teacher bonus amount<br><hr></th>
+				<th width="250px">Teacher Field Name<br><hr></th>
 				<th width="250px">Teacher First Name<br><hr></th>
 				<th width="250px">Teacher Last Name<br><hr></th>
         <th width="250px">Teacher Address<br><hr></th>
@@ -163,11 +165,13 @@ if ($link === false) {
               Note: Fieldnames returned from 
 			  this function are case-sensitive.
 			*/	
-			$sql = mysqli_query($link, "SELECT Teacher_ID,Tname,Tsurname,Taddress,Tmobile,Temail FROM Teacher");
+			$sql = mysqli_query($link, "SELECT Teacher_ID,bonus_amount,teacher_field,Tname,Tsurname,Taddress,Tmobile,Temail FROM Teacher");
 			while ($row = $sql->fetch_assoc()){
 			echo "
 			<tr>
 				<th>{$row['Teacher_ID']}</th>
+                <th>{$row['bonus_amount']}</th>
+                <th>{$row['teacher_field']}</th>
 				<th>{$row['Tname']}</th>
 				<th>{$row['Tsurname']}</th>
         <th>{$row['Taddress']}</th>
