@@ -145,13 +145,15 @@
         <form method="post" action="AddStudent.php">
 
             <label for="Sname">Student Name:*</label>
-            <input type="text" name="Sname"><br /><br />
+            <input type="text" required name="Sname"><br /><br />
             <label for="Ssurname">Student Lastname:*</label>
-            <input type="text" name="Ssurname"><br /><br />
+            <input type="text" required name="Ssurname"><br /><br />
+            <label for="Sbirthday">Student Birthday:*</label>
+            <input type="date" required max="2023-04-06" name="Sbirthday" /><br /><br />
             <label for="Parent_ID">Parent ID:* </label>
-            <input type="text" name="Parent_ID"><br><br>
+            <input type="text" required name="Parent_ID"><br><br>
             <label for="Class_ID">Class ID:*</label>
-            <input type="text" name="Class_ID"><br>
+            <input type="text" required  name="Class_ID"><br>
 
             <br>
 

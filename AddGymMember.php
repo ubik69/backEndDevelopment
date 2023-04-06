@@ -150,7 +150,7 @@
     	  <input required type="text" name="gymFullName"><br><br>
           <label for="userRegDate">Register Date:</label>
           <input required type="date" name="userRegDate"><br><br>
-          <label for="memberType">Course:</label>
+          <label for="memberType">Member Type:</label>
           <select required id="memberType" name="memberType">
               <option value="bronzeMember">Bronze</option>
               <option value="silverMember">Silver</option>

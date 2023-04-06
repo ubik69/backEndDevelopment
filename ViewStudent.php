@@ -152,29 +152,31 @@ if ($link === false) {
 				<th width="150px">student ID<br><hr></th>
 				<th width="250px">Student First Name<br><hr></th>
 				<th width="250px">Student Last Name<br><hr></th>
+                <th width="120px">Student Birthday<br><hr></th>
                 <th width="100px">Student's Parent ID<br><hr></th>
                 <th width="100px">Student's Class ID<br><hr></th>
                 
 			</tr>
 				
-			<?php
+            <?php
 			/* 	function fetches a result row as an associative array.
-              Note: Fieldnames returned from 
+              Note: Fieldnames returned from
 			  this function are case-sensitive.
-			*/	
-			$sql = mysqli_query($link, "SELECT Sid,Sname,Ssurname,Parent_ID,Class_ID FROM Student1");
+			*/
+			$sql = mysqli_query($link, "SELECT Sid,Sname,Ssurname,Sbirthday,Parent_ID,Class_ID FROM Student1");
 			while ($row = $sql->fetch_assoc()){
 			echo "
 			<tr>
 				<th>{$row['Sid']}</th>
 				<th>{$row['Sname']}</th>
 				<th>{$row['Ssurname']}</th>
+                <th>{$row['Sbirthday']}</th>
                 <th>{$row['Parent_ID']}</th>
                 <th>{$row['Class_ID']}</th>
-                
+
 			</tr>";
 			}
-			?>
+            ?>
             </table>
         </body>
         </html>

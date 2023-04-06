@@ -14,8 +14,9 @@ if (isset($_POST['submit'])) {
     $Sid=$_POST['Sid'];
     $Sname=$_POST['Sname'];
     $Ssurname=$_POST['Ssurname'];
+    $Sbirthday=$_POST['Sbirthday'];
 
-    $uptade = "UPDATE Student1 SET Sname = '$Sname' ,Ssurname = '$Ssurname' WHERE Sid= '$Sid'";
+    $uptade = "UPDATE Student1 SET Sname = '$Sname' ,Ssurname = '$Ssurname',Sbirthday='$Sbirthday' WHERE Sid= '$Sid'";
     if(mysqli_query($link,$uptade)){
 
         echo"Record has been uptaded.";

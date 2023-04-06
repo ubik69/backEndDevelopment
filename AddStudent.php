@@ -16,26 +16,27 @@ if ($link === false) {
 
 /*
 The isset() function checks whether a variable
- is set, which means that it has to be declared 
- and is not NULL. 
+ is set, which means that it has to be declared
+ and is not NULL.
  This function returns true if the variable
-  exists and is not NULL, 
+  exists and is not NULL,
   otherwise it returns false.
 */
 if (isset($_POST['submit'])) {
 
     $Sname = $_POST['Sname'];
     $Ssurname = $_POST['Ssurname'];
+    $Sbirthday = $_POST['Sbirthday'];
     $Parent_ID = $_POST['Parent_ID'];
     $Class_ID = $_POST['Class_ID'];
-   
+
 /*
 mysqli_query() function accepts a string value
 representing a query as one of the parameters
-and, executes/performs the given query 
+and, executes/performs the given query
 on the database
 */
-    $send = "INSERT INTO Student1 (Sname,Ssurname,Parent_ID,Class_ID) VALUES ('$Sname','$Ssurname','$Parent_ID','$Class_ID')";
+    $send = "INSERT INTO Student1 (Sname,Ssurname,Sbirthday,Parent_ID,Class_ID) VALUES ('$Sname','$Ssurname','$Sbirthday','$Parent_ID','$Class_ID')";
     if (mysqli_query($link, $send)) {
       echo "New record created successfully";
     } else {
